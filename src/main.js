@@ -1,10 +1,14 @@
 import 'babel-polyfill'
 import Vue from 'vue'
+import 'normalize.css/normalize.css' // A modern alternative to CSS resets
+
 import VueLazyload from 'vue-lazyload'
 import App from './App'
 // import router from './router'
+import './filters' // 加载过滤器
 
-import 'common/stylus/index.styl'
+import 'common/styles/index.scss' // global css
+
 import loading from 'common/image/loading.gif'
 
 Vue.use(VueLazyload, {
