@@ -1,15 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 
+const Dashboard = (resolve) => {
+  import('views/dashboard/index').then((dashboard) => {
+    resolve(dashboard)
+  })
+}
 Vue.use(Router)
-
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      redirect: '/dashboard'
+    },
+    {
+      path: '/dashboard',
+      component: Dashboard
     }
   ]
 })
