@@ -1,10 +1,9 @@
 <template>
-  <div :class="{'has-logo':showLogo}">
-    <logo v-if="showLogo" :collapse="isCollapse" />
+  <div>
+    <logo />
     <el-scrollbar wrap-class="scrollbar-wrapper">
       <el-menu
         :default-active="activeMenu"
-        :collapse="isCollapse"
         :background-color="variables.menuBg"
         :text-color="variables.menuText"
         :unique-opened="false"
@@ -21,7 +20,26 @@
 <script>
 import Logo from './Logo'
 import SidebarItem from './SidebarItem'
+import variables from 'common/styles/variables.scss'
+
 export default {
-  components: { SidebarItem, Logo }
+  components: { SidebarItem, Logo },
+  computed: {
+    routes() {
+      return this.$router.options.routes
+    },
+    activeMenu() {
+      const route = this.$route
+      const { meta, path } = route
+      // if set path, the sidebar will highlight the path you set
+      if (meta.activeMenu) {
+        return meta.activeMenu
+      }
+      return path
+    },
+    variables() {
+      return variables
+    }
+  }
 }
 </script>
