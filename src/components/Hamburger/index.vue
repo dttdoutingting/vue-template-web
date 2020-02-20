@@ -21,6 +21,11 @@ export default {
       type: Boolean,
       default: false
     }
+  },
+  methods: {
+    toggleClick() {
+      this.$emit('toggleClick')
+    }
   }
 }
 </script>

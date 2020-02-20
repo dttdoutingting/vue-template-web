@@ -8,6 +8,7 @@ import VueLazyload from 'vue-lazyload'
 
 import App from './App'
 import router from './router'
+import store from './store'
 import './filters' // 加载过滤器
 import './icons' // icon
 
@@ -24,5 +25,6 @@ Vue.use(ElementUI)
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 })
