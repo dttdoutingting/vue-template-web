@@ -1,6 +1,5 @@
 <template>
   <div class="app-wrapper">
-    <div class="drawer-bg" />
     <sidebar class="sidebar-container" />
     <div class="main-container">
       <div :class="{'fixed-header':fixedHeader}">

@@ -39,6 +39,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~common/styles/variables.scss";
+
 .navbar {
   height: 50px;
   overflow: hidden;
@@ -76,7 +78,7 @@ export default {
       display: inline-block;
       padding: 0 8px;
       height: 100%;
-      font-size: 18px;
+      font-size: $font-size-large;
       color: #5a5e66;
       vertical-align: text-bottom;
 
@@ -109,7 +111,7 @@ export default {
           position: absolute;
           right: -20px;
           top: 25px;
-          font-size: 12px;
+          font-size: $font-size-small;
         }
       }
     }

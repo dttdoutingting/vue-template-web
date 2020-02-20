@@ -2,8 +2,8 @@
   <div class="sidebar-logo-container">
     <transition name="sidebarLogoFade">
       <router-link key="expand" class="sidebar-logo-link" to="/">
-        <img v-if="logo" :src="logo" class="sidebar-logo">
         <h1 class="sidebar-title">{{ title }} </h1>
+        <img v-if="logo" :src="logo" class="sidebar-logo">
       </router-link>
     </transition>
   </div>
@@ -17,7 +17,7 @@ export default {
   },
   data() {
     return {
-      title: 'Vue Admin Template',
+      title: '工作手机',
       logo: 'https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png'
     }
   }
@@ -25,6 +25,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~common/styles/variables.scss";
+
 .sidebarLogoFade-enter-active {
   transition: opacity 1.5s;
 }
@@ -51,7 +53,7 @@ export default {
       width: 32px;
       height: 32px;
       vertical-align: middle;
-      margin-right: 12px;
+      margin-left: 12px;
     }
 
     & .sidebar-title {
@@ -60,7 +62,7 @@ export default {
       color: #fff;
       font-weight: 600;
       line-height: 50px;
-      font-size: 14px;
+      font-size: $font-size-medium;
       font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
       vertical-align: middle;
     }

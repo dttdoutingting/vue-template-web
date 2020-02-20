@@ -10,9 +10,4 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  @import "~common/styles/variables.scss";
-
-  #app {
-    color: $color-theme
-  }
 </style>
